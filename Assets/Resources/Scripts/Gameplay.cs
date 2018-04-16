@@ -21,7 +21,6 @@ public class Gameplay : MonoBehaviour {
     public bool firstGuess, secondGuess;
     string firstName, secondName;
     int firstIndex, secondIndex, correctCount;
-    Text timeText;
     // Use this for initialization
     private void Awake()
     {
@@ -35,14 +34,12 @@ public class Gameplay : MonoBehaviour {
         firstGuess = false;
         secondGuess = false;
         correctCount = 0;
-        timeText = GameObject.Find("TimeText").GetComponent<Text>();
         LoadStage(current_stage);
         
     }
 
     void LoadStage(int stage)
     {
-        timeText.text = "30";
         game_sprites.Clear();
         for (int i = 0; i < stages[stage]; i++)
         {
@@ -59,12 +56,16 @@ public class Gameplay : MonoBehaviour {
     {
         btn_list = GameObject.FindGameObjectsWithTag("Field");
         int index = 0;
-        for(int i=0; i<btn_list.Length; i++)
+        int length = backgrounds.Length;
+        if (length > btn_list.Length / 2 && length % 2 != 0)
+            length--;
+        for (int i=0; i<btn_list.Length; i++)
         {
-            if (i == btn_list.Length/2)
+            if (i == btn_list.Length/2||index>=length)
             {
                 index = 0;
             }
+            Debug.Log("index " + index);
             game_sprites.Add(backgrounds[index]);
             Debug.Log("game_sprites length " + game_sprites.Count);
             index++;
@@ -74,21 +75,10 @@ public class Gameplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        StartCoroutine(reduceTime());
-        int time = int.Parse(timeText.text);
-        if (time <= 0)
-        {
-            SceneManager.LoadScene("game_over");
-        }
+        
+        
     }
 
-    IEnumerator reduceTime()
-    {
-        int time = int.Parse(timeText.text);
-        yield return new WaitForSeconds(1);
-        time--;
-        timeText.text = time.ToString();
-    }
 
     private void AddButtonEvent()
     {
@@ -132,8 +122,10 @@ public class Gameplay : MonoBehaviour {
         yield return new WaitForSeconds(1);
         if(firstName == secondName && firstIndex != secondIndex)
         {
-            GameObject.Destroy(btn_list[firstIndex]);
-            GameObject.Destroy(btn_list[secondIndex]);
+            btn_list[firstIndex].GetComponent<Image>().color = Color.clear;
+            btn_list[secondIndex].GetComponent<Image>().color = Color.clear;
+            btn_list[firstIndex].GetComponent<Button>().interactable = false;
+            btn_list[secondIndex].GetComponent<Button>().interactable = false;
             correctCount++;
             CheckIfFinishedPuzzle();
         }

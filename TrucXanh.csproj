@@ -296,7 +296,9 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\Scripts\Gameplay.cs" />
     <Compile Include="Assets\Resources\Scripts\IntroController.cs" />
+    <Compile Include="Assets\Resources\Scripts\LoseScreenController.cs" />
     <Compile Include="Assets\Resources\Scripts\StartMenu.cs" />
+    <Compile Include="Assets\Resources\Scripts\TimerBehaviour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
