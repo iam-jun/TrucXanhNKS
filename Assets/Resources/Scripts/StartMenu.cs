@@ -89,7 +89,7 @@ public class StartMenu : MonoBehaviour {
         }
         else
         {
-            error_text.text = "Thất bại, vui lòng thử lại!";
+            error_text.text = getStatus.text;
         }
 
 
