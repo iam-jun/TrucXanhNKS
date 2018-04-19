@@ -12,8 +12,13 @@ public class StartMenu : MonoBehaviour {
     Text error_text;
     GameObject loading;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        ChangeXcodePlist.ChangeWifiPlist(UnityEditor.BuildTarget.iOS, Application.dataPath);
+    }
+
+    // Use this for initialization
+    void Start () {
         btn_play = GameObject.Find("btnPlay").GetComponent<Button>();
         input_name = GameObject.Find("InputName").GetComponent<InputField>();
         input_phone = GameObject.Find("InputPhone").GetComponent<InputField>();

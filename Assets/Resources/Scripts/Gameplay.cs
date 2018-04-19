@@ -10,7 +10,7 @@ public class Gameplay : MonoBehaviour {
     private Transform panel;
     [SerializeField]
     private GameObject button;
-    Sprite[] backgrounds;
+    List<Sprite> backgrounds;
     Sprite main_bg;
     private int[] stages;
     [SerializeField]
@@ -24,8 +24,11 @@ public class Gameplay : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
-        backgrounds = Resources.LoadAll<Sprite>("Images/Puzzle");
-        main_bg = Resources.Load<Sprite>("Images/question_mark");
+        Sprite[] _backgrounds = Resources.LoadAll<Sprite>("Images/game_asset");
+        backgrounds = new List<Sprite>();
+        for (int i = 2; i < 9; i++)
+            backgrounds.Add(_backgrounds[i]);
+        main_bg = _backgrounds[0];
     }
 
     void Start () {
@@ -56,7 +59,7 @@ public class Gameplay : MonoBehaviour {
     {
         btn_list = GameObject.FindGameObjectsWithTag("Field");
         int index = 0;
-        int length = backgrounds.Length;
+        int length = backgrounds.Count;
         if (length > btn_list.Length / 2 && length % 2 != 0)
             length--;
         for (int i=0; i<btn_list.Length; i++)
