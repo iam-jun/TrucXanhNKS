@@ -14,7 +14,9 @@ public class StartMenu : MonoBehaviour {
 
     private void Awake()
     {
-        ChangeXcodePlist.ChangeWifiPlist(UnityEditor.BuildTarget.iOS, Application.dataPath);
+        #if UNITY_5 && UNITY_IOS
+                ChangeXcodePlist.ChangeWifiPlist(UnityEditor.BuildTarget.iOS, Application.dataPath);
+        #endif
     }
 
     // Use this for initialization

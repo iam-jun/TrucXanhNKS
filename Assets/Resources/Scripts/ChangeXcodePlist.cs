@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_5 && UNITY_IOS
+using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using System.Collections;
@@ -33,3 +34,4 @@ public class ChangeXcodePlist
         }
     }
 }
+#endif
