@@ -86,7 +86,30 @@ public class StartMenu : MonoBehaviour {
         getUrl = getUrl.Replace("aDate", current_date);
         Debug.Log(getUrl);
         WWW getStatus = new WWW(getUrl);
+        var sec = 0f;
         loading.SetActive(true);
+        while (!getStatus.isDone && sec < 10f)
+        {
+            sec += Time.deltaTime;
+            Debug.Log(getStatus.isDone + " Caching: " + Caching.ready);
+
+            yield return getStatus;
+            loading.SetActive(false);
+            if (getStatus.text.Contains("Success"))
+            {
+                SceneManager.LoadScene("game_stage_1");
+            }
+            else
+            {
+                error_text.text = getStatus.text;
+            }
+            
+        }
+        if (sec >= 10f)
+        {
+            error_text.text = "Lỗi kết nối. Thử lại";
+        }
+
         yield return getStatus;
         loading.SetActive(false);
         Debug.Log(getStatus.text);
@@ -98,7 +121,6 @@ public class StartMenu : MonoBehaviour {
         {
             error_text.text = getStatus.text;
         }
-
 
     }
 
