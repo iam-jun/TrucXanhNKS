@@ -303,6 +303,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\BoyPosition.cs" />
     <Compile Include="Assets\Resources\Scripts\CameraController.cs" />
     <Compile Include="Assets\Resources\Scripts\ChangeXcodePlist.cs" />
     <Compile Include="Assets\Resources\Scripts\Gameplay.cs" />

@@ -470,7 +470,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ReferenceResolution: {x: 2048, y: 1336}
   m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -527,11 +527,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4868368463441580, guid: bd1151156a4936d43a9895e3c9033cdf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.33
+      value: -4.61
       objectReference: {fileID: 0}
     - target: {fileID: 4868368463441580, guid: bd1151156a4936d43a9895e3c9033cdf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.98
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 4868368463441580, guid: bd1151156a4936d43a9895e3c9033cdf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -593,8 +593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 98, y: 2}
-  m_SizeDelta: {x: -240.5, y: -150.3}
+  m_AnchoredPosition: {x: 442.1, y: 40.3}
+  m_SizeDelta: {x: -967.2, y: -485.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538600280
 MonoBehaviour:
@@ -612,10 +612,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 110}
+  m_CellSize: {x: 180, y: 240}
   m_Spacing: {x: 50, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -764,12 +764,12 @@ Prefab:
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 488
+      value: 1162
       objectReference: {fileID: 0}
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 45
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
@@ -835,6 +835,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224734808671955076, guid: c34d39584814f7a4095b9fe1b95e7642,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -260
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c34d39584814f7a4095b9fe1b95e7642, type: 2}
