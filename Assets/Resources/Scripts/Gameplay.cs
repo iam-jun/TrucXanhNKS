@@ -26,9 +26,9 @@ public class Gameplay : MonoBehaviour {
     {
         Sprite[] _backgrounds = Resources.LoadAll<Sprite>("Images/game_asset");
         backgrounds = new List<Sprite>();
-        for (int i = 2; i < 9; i++)
+        for (int i = 6; i < 13; i++)
             backgrounds.Add(_backgrounds[i]);
-        main_bg = _backgrounds[0];
+        main_bg = _backgrounds[4];
     }
 
     void Start () {

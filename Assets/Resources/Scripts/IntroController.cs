@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class IntroController : MonoBehaviour {
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         StartCoroutine(GoStartMenu());
-	}
+        GameObject slogan = GameObject.Find("Slogan");
+        Vector3 screenPosition = new Vector3(1, 1, 1);
+        slogan.transform.position = Camera.main.GetComponent<Camera>().ScreenToWorldPoint(screenPosition);
+    }
+
 
     IEnumerator GoStartMenu()
     {
