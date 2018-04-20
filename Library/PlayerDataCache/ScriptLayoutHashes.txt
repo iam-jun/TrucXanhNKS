@@ -1,4 +1,4 @@
-Android
+iOS
 SceneListBegin?
 Assets/Resources/Scene/intro_screen.unity
 Assets/Resources/Scene/start_menu.unity
