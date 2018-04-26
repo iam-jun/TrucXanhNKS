@@ -32,7 +32,7 @@ public class Gameplay : MonoBehaviour {
     }
 
     void Start () {
-        stages = new int[] {4, 8, 18 };
+        stages = new int[] {8, 12};
         game_sprites = new List<Sprite>();
         firstGuess = false;
         secondGuess = false;
@@ -158,7 +158,7 @@ public class Gameplay : MonoBehaviour {
         {
             current_stage++;
             Debug.Log("Next stage: " + current_stage);
-            if (current_stage < 3)
+            if (current_stage < 2)
             {
                 SceneManager.LoadScene("game_stage_" + (current_stage+1));
             }
