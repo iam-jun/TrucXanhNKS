@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -630,7 +630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 329.4, y: 18.1}
+  m_AnchoredPosition: {x: 329.40002, y: 18.099976}
   m_SizeDelta: {x: -980, y: -507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538600280
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_ChildAlignment: 3
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 140, y: 200}
+  m_CellSize: {x: 180, y: 260}
   m_Spacing: {x: 50, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 4
@@ -801,12 +801,12 @@ Prefab:
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1162
+      value: 1305
       objectReference: {fileID: 0}
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 122
+      value: 141
       objectReference: {fileID: 0}
     - target: {fileID: 224579439725454636, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
@@ -851,27 +851,27 @@ Prefab:
     - target: {fileID: 224587481424156632, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224587481424156632, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224832302054480446, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224832302054480446, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224832302054480446, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224323598360214148, guid: c34d39584814f7a4095b9fe1b95e7642,
         type: 2}
@@ -902,6 +902,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224587481424156632, guid: c34d39584814f7a4095b9fe1b95e7642,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.9100037
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c34d39584814f7a4095b9fe1b95e7642, type: 2}

@@ -32,7 +32,7 @@ public class Gameplay : MonoBehaviour {
     }
 
     void Start () {
-        stages = new int[] {8, 12};
+        stages = new int[] {4, 8};
         game_sprites = new List<Sprite>();
         firstGuess = false;
         secondGuess = false;
